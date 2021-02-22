@@ -2,12 +2,21 @@
     box-sizing: border-box;
 }
 
-#title {
-    background-color: #F3F4F6;
+#card-payment {
+    background-color: #9CA3AF;
+    width: 247px;
 }
 
 .form-container {
     display:flex;
     justify-content:center;
     align-items: center;
+}
+
+#title-form {
+    background-color: #F3F4F6;
+}
+
+#text-small {
+    font-size:12px;
 }

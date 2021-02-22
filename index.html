@@ -18,11 +18,14 @@
         <div class="form-container">
             <div class="card col-12 mt-4 ">
                 <div class="card-content">
-                    <h1 class="p-3" id="title">Payment form example</h1>
+
+                    <h1 class="p-3" id="title-form">Payment form example</h1>
                     <form class="p-4">
+
                         <div class="alert alert-danger" role="alert">
                             Some fields are missing
-                          </div>
+                        </div>
+
                         <div class="row p-1">
                                 <div class="form-group col">
                                     <label for="card-number">Card #</label>
@@ -75,35 +78,47 @@
                         <div class="row p-1">
 
                             <div class="form-check-container col">
+                                <div id="title-card-payment">
+                                    <label for="card-payment">We accept:</label>
+                                </div>
                                 
-                                <h6>We accept:</h6>
-                                <span class="bg-secondary p-2">
-                            <div class="form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                
-                              </div>
-                              <div class="form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                
-                              </div>
-                              <div class="form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                                
+                                <div class="p-2 mt-3 rounded-1" id="card-payment">
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <i class="fab fa-cc-mastercard"></i>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <i class="fab fa-cc-visa"></i>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                                        <i class="fab fa-cc-diners-club"></i>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+                                        <i class="fab fa-cc-amex"></i>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
-                                
-                            </div>
-                            </div>
-
+                            
                             <div class="form-group col">
                                 <label for="">Message</label>
                                 <textarea class="form-control h-75" type="text" id="message"></textarea>
-                                <small class="text-muted">Add any notes here</small>
+                                <p class="text-muted" id="text-small">Add any notes here</p>
                             </div>
-                        </span>
+                                
                         </div>
+
+                        <div class="form-group row p-1">
+                            <div class="col">
+                                <button class="btn btn-primary float-end m-1">Send</button>
+                                <button class="btn btn-secondary float-end m-1">Cancel</button>
+                            </div>
+                        </div>
+                        
                     </form>
+
                 </div>
             </div>
         </div>
