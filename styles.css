@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+}
+
+#title {
+    background-color: #F3F4F6;
+}
+
+.form-container {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
