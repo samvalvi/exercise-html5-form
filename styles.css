@@ -1,18 +1,4 @@
-*{
-    box-sizing: border-box;
-}
-
 #card-payment {
     background-color: #9CA3AF;
     width: 247px;
-}
-
-.form-container {
-    display:flex;
-    justify-content:center;
-    align-items: center;
-}
-
-#text-small {
-    font-size:12px;
 }

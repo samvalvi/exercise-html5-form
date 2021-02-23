@@ -15,76 +15,87 @@
 
     <div class="container">
 
-        <div class="form-container">
+            <div class="card col-10 mx-auto mt-4 mb-4">
+                <!--Header-->
+                <header class="card-header">                        
+                    <h2>Payment form example</h2>
+                </header>
 
-            <div class="card col-12 mt-4 ">
-            
-                <div class="card-header">                        
-                    <h1>Payment form example</h1>
+                <div class="alert alert-danger m-4" role="alert">
+                    Some fields are missing
                 </div>
 
-               
-                <div class="card-content">
-                    <form class="p-4">
-
-                        <div class="alert alert-danger" role="alert">
-                            Some fields are missing
-                        </div>
-
+                <!--Form-->
+                <form>
+                    
+                    <!--Content-->
+                    <div class="card-content m-4">
+                    
                         <div class="row p-1">
-                                <div class="form-group col">
-                                    <label for="card-number">Card #</label>
-                                    <input type="text" class="form-control" id="card-number" placeholder="xxxxxxxxxxxx" required>
-                                </div>
                                 
-                                <div class="form-group col">
-                                    <label for="cvc">CVC #</label>
-                                    <input type="text" class="form-control" id="cvc" placeholder="0000" required>
-                                </div>
+                            <div class="form-group col">
+                                <label for="card-number" class="fw-bold">Card #</label>
+                                <input type="text" class="form-control" id="card-number" placeholder="xxxxxxxxxxxx" required>
+                            </div>
+                                
+                            <div class="form-group col">
+                                <label for="cvc" class="fw-bold">CVC #</label>
+                                <input type="text" class="form-control" id="cvc" placeholder="0000" required>
+                            </div>
 
-                                <div class="form-group col">
-                                    <label for="amount">Amount</label>
-                                    <i class="fas fa-dollar-sign"></i> <input type="text" class="form-control" id="amount" placeholder="Amount" required>
+                            <div class="form-group col">
+                                <label for="amount" class="fw-bold">Amount</label>
+                                <div class="input-group">
+                                    <div>
+                                        <i class="fas fa-dollar-sign col"></i>
+                                    </div>
+                                    <input type="text" class="form-control" id="amount" placeholder="Amount" required>
                                 </div>
+                            </div>
+
                         </div>
 
                         <div class="row p-1">
+
                             <div class="form-group col">
-                                <label for="firstname">First name</label>
+                                <label for="firstname" class="fw-bold">First name</label>
                                 <input type="text" class="form-control" id="firstname" required>
                             </div>
 
                             
                             <div class="form-group col">
-                                <label for="lastname">Last name</label>
+                                <label for="lastname" class="fw-bold">Last name</label>
                                 <input type="text" class="form-control" id="lastname" required>
                             </div>
+
                         </div>
 
                         <div class="row p-1">
+                            
                             <div class="form-group col">
-                                <label for="city">City</label>
+                                <label for="city" class="fw-bold">City</label>
                                 <input type="text" class="form-control" id="city" required>
                             </div>
 
                             <div class="form-group col">
-                                <label for="state">State</label>
+                                <label for="state" class="fw-bold">State</label>
                                 <select class="form-select" id="state">
                                     <option selected>Pick a state</option>
                                 </select>
                             </div>
                             
                             <div class="form-group col">
-                                <label for="postalcode">Postal code</label>
+                                <label for="postalcode" class="fw-bold">Postal code</label>
                                 <input type="text" class="form-control" id="postalcode" required>
                             </div>
+
                         </div>
 
                         <div class="row p-1">
 
                             <div class="form-check-container col">
                                 <div id="title-card-payment">
-                                    <label for="card-payment">We accept:</label>
+                                    <label for="card-payment" class="fw-bold">We accept:</label>
                                 </div>
                                 
                                 <div class="p-2 mt-3 rounded-1" id="card-payment" required>
@@ -108,25 +119,25 @@
                             </div>
                             
                             <div class="form-group col">
-                                <label for="message">Message</label>
+                                <label for="message" class="fw-bold">Message</label>
                                 <textarea class="form-control h-75" type="text" id="message"></textarea>
-                                <small class="text-muted" id="text-small">Add any notes here</small>
+                                <div class="form-text fs-sm-4">Add any notes here.</div>
                             </div>
-                                
-                        </div>
-
-                    </form>
-                </div>
-                
-                <div class="card-footer">
-                    <div class="button-group">
-                        <button class="btn btn-primary float-end m-1" type="submit">Send</button>
-                        <button class="btn btn-secondary float-end m-1" type="reset">Cancel</button>
+                        </div>      
+                    
                     </div>
-                </div>
 
+                    <!--Footer-->
+                    <div class="card-footer mt-5" style="height:4rem;">
+                        <div class="button-group">
+                            <button class="btn btn-primary float-end m-1" type="submit">Send</button>
+                            <button class="btn btn-secondary float-end m-1" type="reset">Cancel</button>
+                        </div>
+                    </div>
+
+                </form>
+                
             </div>
-
         </div>
 
     </div>
