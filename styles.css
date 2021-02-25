@@ -1,4 +1,7 @@
 #card-payment {
     background-color: #9CA3AF;
-    width: 247px;
 }
+
+.cardfooter {
+    height: 4rem;
+} 
