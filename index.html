@@ -2,29 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <!--bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+    <!--Fontawesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="./styles.css">
-    <title>Payment form example</title>
+   
+    <title>Form Validation</title>
 </head>
 <body>
-
     <div class="container">
 
-        <div class="card-container">
-
-            <div class="card col-10 mx-auto mt-4 mb-4 shadow rounded-1">
+            <div class="card w-75 mx-auto m-4 shadow-sm rounded-1">
                 <!--Header-->
                 <div class="card-header" id="header">                        
                     <h2>Payment form example</h2>
                 </div>
 
                 <!--Form-->
-                <form>
+                <form method="post" onsubmit="formValidation();">
 
                     <!--Alert-->
                     <div class="alert alert-danger m-4" role="alert">
@@ -36,18 +33,18 @@
                     
                         <div class="row p-1">
                                 
-                            <div class="form-group col">
-                                <label for="card-number" class="fw-bold">Card #</label>
+                            <div class="col-md-5 mb-2">
+                                <label for="card-number" class="form-label fw-bold">Card #</label>
                                 <input type="text" class="form-control" id="card-number" placeholder="xxxxxxxxxxxx" required>
                             </div>
                                 
-                            <div class="form-group col">
-                                <label for="cvc" class="fw-bold">CVC #</label>
+                            <div class="col-md-3 mb-2">
+                                <label for="cvc" class="form-label fw-bold">CVC #</label>
                                 <input type="text" class="form-control" id="cvc" placeholder="0000" required>
                             </div>
 
-                            <div class="form-group col">
-                                <label for="amount" class="fw-bold">Amount</label>
+                            <div class="col-md-4 mb-2">
+                                <label for="amount" class="form-label fw-bold">Amount</label>
                                 <div class="input-group">
                                     <div>
                                         <i class="fas fa-dollar-sign col"></i>
@@ -60,14 +57,14 @@
 
                         <div class="row p-1">
 
-                            <div class="form-group col">
-                                <label for="firstname" class="fw-bold">First name</label>
+                            <div class="col-md-6 mb-2">
+                                <label for="firstname" class="form-label fw-bold">First name</label>
                                 <input type="text" class="form-control" id="firstname" required>
                             </div>
 
                             
-                            <div class="form-group col">
-                                <label for="lastname" class="fw-bold">Last name</label>
+                            <div class="col-md-6 mb-2">
+                                <label for="lastname" class="form-label fw-bold">Last name</label>
                                 <input type="text" class="form-control" id="lastname" required>
                             </div>
 
@@ -75,20 +72,25 @@
 
                         <div class="row p-1">
                             
-                            <div class="form-group col">
-                                <label for="city" class="fw-bold">City</label>
+                            <div class="col-md-6 mb-2">
+                                <label for="city" class="form-label fw-bold">City</label>
                                 <input type="text" class="form-control" id="city" required>
                             </div>
 
-                            <div class="form-group col">
-                                <label for="state" class="fw-bold">State</label>
+                            <div class="col-md-3 mb-2">
+                                <label for="state" class="form-label fw-bold">State</label>
                                 <select class="form-select" id="state">
                                     <option selected>Pick a state</option>
+                                    <option value="alabama">Alabama</option>
+                                    <option value="california">California</option>
+                                    <option value="colorado">Colorado</option>
+                                    <option value="indiana">Indiana</option>
+                                    <option value="nebraska">Nebraska</option>
                                 </select>
                             </div>
                             
-                            <div class="form-group col">
-                                <label for="postalcode" class="fw-bold">Postal code</label>
+                            <div class="col-md-3 mb-2">
+                                <label for="postalcode" class="form-label fw-bold">Postal code</label>
                                 <input type="text" class="form-control" id="postalcode" required>
                             </div>
 
@@ -96,12 +98,11 @@
 
                         <div class="row p-1">
 
-                            <div class="form-check-container col">
-                                <div id="title-card-payment">
-                                    <label for="card-payment" class="fw-bold">We accept:</label>
-                                </div>
-                                
-                                <div class="p-2 mt-3 rounded-1" id="card-payment" required>
+                            <div class="col-md-6">
+
+                                <label for="paymentCard" class="form-label fw-bold">We accept:</label>
+                                <div class="col-lg-8 rounded-1 p-2 d-flex justify-content-between bg-secondary text-light">
+                                    
                                     <div class="form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                         <i class="fab fa-cc-mastercard"></i>
@@ -118,14 +119,16 @@
                                         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
                                         <i class="fab fa-cc-amex"></i>
                                     </div>
+
                                 </div>
                             </div>
-                            
-                            <div class="form-group col">
-                                <label for="message" class="fw-bold">Message</label>
-                                <textarea class="form-control h-75" type="text" id="message"></textarea>
-                                <div class="form-text fs-sm-4">Add any notes here.</div>
+
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold" for="messages">Message</label>
+                                <textarea class="form-control" id="messages" style="height: 100px;"></textarea>
+                                <div id="emailHelp" class="form-text">Add any notes here.</div>
                             </div>
+
                         </div>      
                     
                     </div>
@@ -134,7 +137,7 @@
                     <div class="card-footer mt-5">
                         
                         <div class="row p-1">
-                            <div class="button-group">
+                            <div class="col-md-12">
                                 <button class="btn btn-primary float-end m-1" type="submit">Send</button>
                                 <button class="btn btn-secondary float-end m-1" type="reset">Cancel</button>
                             </div>
@@ -145,13 +148,10 @@
                 </form>
                 
             </div>
-            
-        </div>
 
     </div>
 
-
-    <!--Javascript-->
+    <!--Bootstrap Bundle-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>
